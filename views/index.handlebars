@@ -1,5 +1,5 @@
 <div class="container mt-5 d-flex justify-content-center">
-  <form>
+  <form action='/login' method="POST">
     <h3>Account Login</h3>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -13,6 +13,7 @@
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+    <p class="text-danger">{{#if results}} {{results}} {{/if}}</p>
     <div class="d-flex flex-column align-items-center">
       <button type="submit" class="btn btn-primary">Sign in</button>
     </div>
