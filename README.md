@@ -26,7 +26,7 @@ $ npm install -g nodemon
 執行
 
 ```
-$ npm run dev or
+$ npm run dev
 ```
 
 終端機顯示表示成功執行
