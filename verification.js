@@ -26,19 +26,17 @@ function verification(email, password) {
       password: 'password'
     }
   ]
-  const errorMessage = 'Email or Password is not correct'
-  const correctMessage = 'Welcom Back,'
   let usersMap = {}
   users.forEach(user => {
     usersMap[user.email] = user
   })
   if (!usersMap[email]) {
-    return errorMessage
+    return false
   } else {
     if (password === usersMap[email].password) {
-      return `${correctMessage} ${usersMap[email].firstName}！`
+      return usersMap[email]
     } else {
-      return errorMessage
+      return false
     }
   }
 }
